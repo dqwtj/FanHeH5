@@ -1,0 +1,25 @@
+- error = @shing.errors.include?(:title)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :title, :class => 'control-label'
+  div class='controls'
+    = f.text_field :title, :class => 'form-control input-large input-with-feedback', :autofocus => true
+    span class='help-inline' = error ? f.error_message_on(:title, :class => 'text-error') : pat(:example)
+- error = @shing.errors.include?(:gogo)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :gogo, :class => 'control-label'
+  div class='controls'
+    = f.text_field :gogo, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:gogo, :class => 'text-error') : pat(:example)
+- error = @shing.errors.include?(:stop)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :stop, :class => 'control-label'
+  div class='controls'
+    = f.text_field :stop, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:stop, :class => 'text-error') : pat(:example)
+
+div class="form-actions"
+  = f.submit pat(:save), :class => 'btn btn-primary'
+  |&nbsp;
+  = f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue'
+  |&nbsp;
+  = link_to pat(:cancel), url(:shings, :index), :class => 'btn btn-default'
