@@ -33,4 +33,8 @@ Padrino.configure_apps do
 end
 
 # Mounts the core application for this project
+
+Padrino.mount('FanHeH5::Tung', :app_file => Padrino.root('tung/app.rb')).to('/tung')
+
+Padrino.mount("FanHeH5::Admin", :app_file => Padrino.root('admin/app.rb')).to("/admin")
 Padrino.mount('FanHeH5::App', :app_file => Padrino.root('app/app.rb')).to('/')

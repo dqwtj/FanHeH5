@@ -7,3 +7,4 @@
 :stylesheet: none
 :namespace: FanHeH5
 :migration_format: number
+:admin_renderer: slim
