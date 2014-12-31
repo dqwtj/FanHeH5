@@ -24,6 +24,10 @@ gem 'mysql2'
 # Padrino Stable Gem
 gem 'padrino', '0.12.4'
 
+group :development do
+  gem 'thin'
+end
+
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 

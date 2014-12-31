@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="黄历">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+
+  <title>饭盒老黄历</title>
+  <%= stylesheet_link_tag 'shing' %>
+</head>
+  <body>
+  	<div class="container">
+    <h1 class="banner"> <%= image_tag 'banner.png', :class => "img-responsive" %> </h1>
+    <p class="date"><%= Date.today.strftime("%Y年%m月%d日 星期%w") %></p>
+    <div class="doit">
+      <h2><%= @go1.title %></h2>
+      <p><%= @go1.gogo %></p>
+      <h2><%= @go2.title %></h2>
+      <p><%= @go2.gogo %></p>
+    </div>
+    <div class="stop">
+      <h2><%= @stop1.title %></h2>
+      <p><%= @stop1.stop %></p>
+      <h2><%= @stop2.title %></h2>
+      <p><%= @stop2.stop %></p>
+    </div>
+    </div>
+  </body>
+</html>

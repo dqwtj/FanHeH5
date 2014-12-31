@@ -1,0 +1,37 @@
+- error = @item.errors.include?(:yday)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :yday, :class => 'control-label'
+  div class='controls'
+    = f.text_field :yday, :class => 'form-control input-large input-with-feedback', :autofocus => true
+    span class='help-inline' = error ? f.error_message_on(:yday, :class => 'text-error') : pat(:example)
+- error = @item.errors.include?(:go1)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :go1, :class => 'control-label'
+  div class='controls'
+    = f.text_field :go1, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:go1, :class => 'text-error') : pat(:example)
+- error = @item.errors.include?(:go2)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :go2, :class => 'control-label'
+  div class='controls'
+    = f.text_field :go2, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:go2, :class => 'text-error') : pat(:example)
+- error = @item.errors.include?(:stop1)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :stop1, :class => 'control-label'
+  div class='controls'
+    = f.text_field :stop1, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:stop1, :class => 'text-error') : pat(:example)
+- error = @item.errors.include?(:stop2)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :stop2, :class => 'control-label'
+  div class='controls'
+    = f.text_field :stop2, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:stop2, :class => 'text-error') : pat(:example)
+
+div class="form-actions"
+  = f.submit pat(:save), :class => 'btn btn-primary'
+  |&nbsp;
+  = f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue'
+  |&nbsp;
+  = link_to pat(:cancel), url(:items, :index), :class => 'btn btn-default'
